@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Editor</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<script type="text/javascript" src="../ckeditor.js"></script>
+	<script src="sample.js" type="text/javascript"></script>
+	<link href="sample.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.email_row{
+			float:left;
+			width:80%;
+			padding-bottom:5px;
+		}
+		.email_input{
+			width:60%;
+			height:15px;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" method="post">
+			<div class="email_row">
+				收件人：<input type="text" name="to" class="email_input" />
+			</div>
+			<div class="email_row">
+				主&nbsp;&nbsp;&nbsp;&nbsp;题：<input type="text" name="to" class="email_input" />
+			</div>
+			<div class="email_row">
+				内&nbsp;&nbsp;&nbsp;&nbsp;容：
+			<textarea cols="80" id="editor1" name="editor1" rows="10">Input here</textarea>
+			<script type="text/javascript">
+			//<![CDATA[
+
+				CKEDITOR.replace( 'editor1',
+					{
+						fullPage : true,
+						extraPlugins : 'docprops'
+					});
+
+			//]]>
+			</script>
+			</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<include file="oa-sys.xml"/>
+	<include file="oa-email.xml"/>
+	<include file="oa-documents.xml"/>
+	<include file="oa-notices.xml"/>
+	<include file="oa-bbs.xml"/>
+	<include file="oa-addresslists.xml"/>
+	<package name="oa-default" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="transaction" class="com.zhtarena.oa.web.interceptor.TransactionInterceptor"></interceptor>
+			<interceptor-stack name="oaStack">
+				<interceptor-ref name="transaction"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="oaStack"/>
+	
+		<global-results>
+			<result name="login">
+				/oa/login.jsp
+			</result>
+			<result name="error">
+					/error.jsp
+			</result>
+		</global-results>
+			
+		<action name="test" class="com.zhtarena.oa.test.TestAction">
+			<result>index.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="user" extends="oa-default" namespace="/user">
+		<action name="userAction" class="com.zhtarena.oa.web.action.UserAction">
+			<result>/oa/main.html</result>
+			<result name="fail">/oa/login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="module" extends="oa-default" namespace="/module">
+		<action name="moduleList" class="com.zhtarena.oa.web.action.ModuleAction">
+			<result>/oa/left.jsp</result>
+			<result name="list">/oa/pages/module/show.jsp</result>
+		</action>
+	
+	</package>
+    
+</struts>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table name="t_addresslist" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Addresslist">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_document" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Document">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_domain" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Domain">
+	</table>
+	<table name="t_flow" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Flow">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_infotype" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Infotype">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_mail" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Mail">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_module" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Module">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_muser" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Muser">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_musers" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Musers">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_notice" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Notice">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_role" catalog="oa_database"
+		class="com.zhtarena.oa.entity.Role">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="t_user" catalog="oa_database"
+		class="com.zhtarena.oa.entity.User">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+<table name="t_bbs" catalog="oa_database"
+	class="com.zhtarena.oa.entity.Bbs">
+	<primary-key>
+		<generator class="identity"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

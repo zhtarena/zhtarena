@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="oa-bbs" extends="oa-default" namespace="/bbs">
+		<action name="bbsAction" class="com.zhtarena.oa.web.action.BBSAction">
+			<result>/oa/pages/bbs/bbsIndex.jsp</result>
+			<result name="insertOk" type="redirectAction">
+				bbs/bbsAction!listRoot
+			</result>
+			<result name="loadOk">
+				/oa/pages/bbs/rebbsIndex.jsp
+			</result>
+			<result name="replyOk" type="chain">
+				<param name="actionName">bbsAction</param>
+				<param name="method">load</param>
+			</result>
+			<result name="delByIdOk" type="redirectAction">
+				bbs/bbsAction!listRoot
+			</result>
+			<result name="pageOk" type="redirectAction">
+				bbs/bbsAction!listRoot
+			</result>
+		</action>
+	</package>
+    
+</struts>
